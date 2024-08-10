@@ -100,7 +100,7 @@
     .box{
 
         height: 20vh;
-        width: 30%;
+        width: 32%;
         font-size: 3rem;
         font-weight: bolder;
         background-color: cadetblue;
@@ -115,5 +115,16 @@
         color: white;
         font-weight: 700;
         margin-top: 10px;
+    }
+
+    .m-container{
+        height: 90%;
+        width: 90%;
+        padding: 2x;
+        margin: auto;
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
