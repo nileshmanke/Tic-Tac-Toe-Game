@@ -1,5 +1,6 @@
 let boxes=document.querySelectorAll(".box");
 let msg=document.querySelector(".msg");
+let count=0;
 
 const winpatterns=[
     [0,1,2],
@@ -33,7 +34,18 @@ boxes.forEach((box)=>{
         }
 
         box.disabled=true;
-        checkwinner();
+        count ++;
+      let isWinner=  checkwinner();
+
+        if(count === 9 && !isWinner){
+
+           document.getElementById("showwinner").innerHTML="Game Draw !!"
+            msg.classList.remove("hide");
+            count=0;
+        }
+
+
+
         console.log(count);
     })
 })
@@ -45,6 +57,7 @@ const reset=()=>{
         showwinner.innerHTML="";
          msg.classList.add("hide");
          turnx=true;
+         count=0;
 
     })
 
@@ -59,6 +72,7 @@ const newgame=()=>{
         showwinner.innerHTML="";
          msg.classList.add("hide");
          turnx=true;
+         count=0;
 
     })
 
@@ -80,7 +94,7 @@ const checkwinner=()=>{
             if(val1 == val2 && val2 == val3){
 
                 console.log("winner  is ", val1);
-                showwinner.innerHTML=val1;
+                showwinner.innerHTML=`Congratulations Winner is ${val1}`;
                 msg.classList.remove("hide");
                 boxes.forEach((box)=>{
                     box.disabled=true;
@@ -89,6 +103,7 @@ const checkwinner=()=>{
                 
                 
              }
+             
 
             
          }
