@@ -77,3 +77,42 @@
     flex-direction: column;
     gap: 20px;
 }
+.g-heading{
+    font-weight: bolder;
+    font-size: 3rem;
+}
+@media only screen and (max-width: 600px) {
+    
+    .msg{
+        background-color: chocolate;
+       
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 5px;
+    color: white;
+    }
+
+    .g-heading{
+        font-size: 1rem;
+    }
+    .box{
+
+        height: 20vh;
+        width: 25%;
+        font-size: 3rem;
+        font-weight: bolder;
+        background-color: cadetblue;
+        color: black;
+         
+    }
+
+    .new-btn{
+        padding: 3px;
+        border-radius: 0.5rem;
+        background-color: black;
+        color: white;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+}
