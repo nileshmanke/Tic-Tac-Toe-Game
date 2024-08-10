@@ -19,6 +19,8 @@ const winpatterns=[
 let turnx=true;
 
 boxes.forEach((box)=>{
+    
+    
     box.addEventListener("click", ()=>{
         if(turnx){
             box.innerHTML="x";
@@ -32,6 +34,7 @@ boxes.forEach((box)=>{
 
         box.disabled=true;
         checkwinner();
+        console.log(count);
     })
 })
 
@@ -86,6 +89,8 @@ const checkwinner=()=>{
                 
                 
              }
+
+            
          }
 
     }
