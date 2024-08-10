@@ -6,7 +6,14 @@
     <title>Tic Tac Toe Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<main class="main">
 <body>
+    
+    <div class="msg hide">
+     Congratulations   Winner is <span id="showwinner"></span>
+     <br>
+     <button class="new-btn" onclick="newgame()">Start New Game</button>
+    </div>
   
 <container class="m-container">
 
@@ -28,9 +35,9 @@
 </gamecontainer>
 </container>
 
-<button class="reset-btn">Reset Game</button>
+<button class="reset-btn" onclick="reset()">Reset Game</button>
 
-
+</main>
     
     <script src="script.js"></script>
 </body>

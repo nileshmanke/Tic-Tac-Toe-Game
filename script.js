@@ -1,4 +1,5 @@
 let boxes=document.querySelectorAll(".box");
+let msg=document.querySelector(".msg");
 
 const winpatterns=[
     [0,1,2],
@@ -34,26 +35,59 @@ boxes.forEach((box)=>{
     })
 })
 
+const reset=()=>{
+    boxes.forEach((box)=>{
+        box.innerText="";
+        box.disabled=false;
+        showwinner.innerHTML="";
+         msg.classList.add("hide");
+         turnx=true;
 
+    })
+
+}
+
+
+const newgame=()=>{
+
+    boxes.forEach((box)=>{
+        box.innerText="";
+        box.disabled=false;
+        showwinner.innerHTML="";
+         msg.classList.add("hide");
+         turnx=true;
+
+    })
+
+}
 
 
 const checkwinner=()=>{
 
-    winpatterns.forEach((patter)=>{
 
-        // console.log(patter[0],patter[1],patter[2]);
-        // console.log(boxes[patter[0]],boxes[patter[1]],boxes[patter[2]]);
 
-        val1=boxes[patter[0]];
-        val2=boxes[patter[1]];
-        val3=boxes[patter[2]];
+    for( let patter of winpatterns){
 
-        if(val1 != "" && val2 != "" && val3 != "" ){
+        let val1=boxes[patter[0]].innerText;
+     let val2=boxes[patter[1]].innerText;
+ let val3=boxes[patter[2]].innerText;
+
+
+ if(val1 != "" && val2 != "" && val3 != "" ){
             if(val1 == val2 && val2 == val3){
 
-                console.log("winner  is ", val1.innertext);
-            }
-        }
+                console.log("winner  is ", val1);
+                showwinner.innerHTML=val1;
+                msg.classList.remove("hide");
+                boxes.forEach((box)=>{
+                    box.disabled=true;
 
-    })
+                })
+                
+                
+             }
+         }
+
+    }
+
 }

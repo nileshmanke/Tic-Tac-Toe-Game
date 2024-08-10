@@ -5,8 +5,9 @@
 
 
 .m-container{
-    height: 90vh;
-    width: 90vh;
+    height: 90%;
+    width: 90%;
+    padding: 10px;
     margin: auto;
     background-color: antiquewhite;
     display: flex;
@@ -17,7 +18,7 @@
 
 .box{
     height: 25vh;
-    width: 25vh;
+    width: 25%;
     font-size: 5rem;
     font-weight: bolder;
     background-color: cadetblue;
@@ -28,8 +29,9 @@
 }
 
 .g-container{
-    height: 80vh;
-    width: 80vh;
+    height: 100%;
+    width: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +43,37 @@
 .reset-btn{
     padding: 10px;
     border-radius: 1rem;
-    border: none;
     background-color: black;
     color: white;
+    font-weight: bolder;
+    border: none;
+}
+
+.msg{
+    background-color: brown;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 10px;
+    color: white;
+    
+}
+
+.hide{
+    display: none;
+}
+.new-btn{
+    padding: 5px;
+    border-radius: 1rem;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
 }
