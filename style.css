@@ -81,8 +81,18 @@
     font-weight: bolder;
     font-size: 3rem;
 }
+
+#showwinner{
+    color: white; 
+    font-weight: bolder;
+     font-size: 3rem;
+}
 @media only screen and (max-width: 600px) {
-    
+    #showwinner{
+        color: white; 
+        font-weight:700;
+         font-size: 1rem;
+    }
     .msg{
         background-color: chocolate;
        
@@ -127,4 +137,5 @@
         align-items: center;
         justify-content: center;
     }
+
 }
